@@ -13,10 +13,12 @@ import javax.swing.JProgressBar;
 public class gg implements Runnable{
    private JProgressBar barra;
    private  JProgressBar bar2;
+   private boolean flag;
 
     public gg(JProgressBar barra,JProgressBar bar2 ) {
         this.barra = barra;
         this.bar2 = bar2;
+        flag=false;
     }
 
     public JProgressBar getBarra() {
@@ -34,8 +36,13 @@ public class gg implements Runnable{
     public void setBar2(JProgressBar bar2) {
         this.bar2 = bar2;
     }
-   
-    
+   public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
     @Override
     public void run() {         
         while(true){            

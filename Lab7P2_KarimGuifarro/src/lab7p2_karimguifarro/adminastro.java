@@ -17,7 +17,7 @@ public class adminastro {
         arch = new File(path);
     }
 
-    public ArrayList<astronuta> getListaPersonas() {
+    public ArrayList<astronuta> getListaastro() {
         return listaastro;
     }
 
@@ -38,7 +38,7 @@ public class adminastro {
     
     @Override
     public String toString() {
-        return "adminastro{" + "listaastro=" + listaastro + ", arch=" + arch + '}';
+        return "adminastro{" + "listaastro=" + listaastro + '}';
     }
     public void cargarArchivo() {
         try {

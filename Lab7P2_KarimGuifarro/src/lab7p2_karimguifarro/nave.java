@@ -9,17 +9,16 @@ import java.io.Serializable;
 
 public class nave implements Serializable {
 
-    private String nombre, ID, tripulacion;
+    private String nombre, ID;
     private int max_personas, tiempo_despegue, tiempo_aterrizaje, velcidad, distanciamax, combustible, reserva;
     private static final long SerialVersionUID = 555L;
 
     public nave() {
     }
 
-    public nave(String nombre, String ID, String tripulacion, int max_personas, int tiempo_despegue, int tiempo_aterrizaje, int velcidad, int distanciamax, int combustible, int reserva) {
+    public nave(String nombre, String ID, int max_personas, int tiempo_despegue, int tiempo_aterrizaje, int velcidad, int distanciamax, int combustible, int reserva) {
         this.nombre = nombre;
         this.ID = ID;
-        this.tripulacion = tripulacion;
         this.max_personas = max_personas;
         this.tiempo_despegue = tiempo_despegue;
         this.tiempo_aterrizaje = tiempo_aterrizaje;
@@ -43,14 +42,6 @@ public class nave implements Serializable {
 
     public void setID(String ID) {
         this.ID = ID;
-    }
-
-    public String getTripulacion() {
-        return tripulacion;
-    }
-
-    public void setTripulacion(String tripulacion) {
-        this.tripulacion = tripulacion;
     }
 
     public int getMax_personas() {

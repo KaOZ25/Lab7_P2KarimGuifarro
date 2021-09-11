@@ -36,7 +36,7 @@ public class adminave {
 
     @Override
     public String toString() {
-        return "adminave{" + "listanave=" + listanave + ", arch=" + arch + '}';
+        return "adminave{" + "listanave=" + listanave + '}';
     }
     
      public void cargarArchivo() {

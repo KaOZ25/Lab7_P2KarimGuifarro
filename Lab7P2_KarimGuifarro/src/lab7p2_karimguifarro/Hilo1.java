@@ -6,28 +6,43 @@
 package lab7p2_karimguifarro;
 
 import javax.swing.JProgressBar;
+import javax.swing.JSpinner;
 
 /**
  *
  * @author Karim Ozael
  */
-public class Hilo1 extends Thread{
-     private JProgressBar barra;
+public class Hilo1 extends Thread {
+
+    private JProgressBar prg_c;
+    int consumo;
     private boolean avanzar;
     private boolean vive;
 
-    public Hilo1(JProgressBar barra) {
-        this.barra = barra;
-        avanzar=true;
-        vive=true;
+    public Hilo1(JProgressBar prg_c, int consumo) {
+        this.prg_c = prg_c;
+        this.consumo = consumo;
+        avanzar = true;
+        vive = true;
     }
 
-    public JProgressBar getBarra() {
-        return barra;
+   
+
+    public JProgressBar getPrg_c() {
+        return prg_c;
     }
 
-    public void setBarra(JProgressBar barra) {
-        this.barra = barra;
+    public void setPrg_c(JProgressBar prg_c) {
+        this.prg_c = prg_c;
+    }
+
+
+    public int getConsumo() {
+        return consumo;
+    }
+
+    public void setConsumo(int consumo) {
+        this.consumo = consumo;
     }
 
     public boolean isAvanzar() {
@@ -45,21 +60,21 @@ public class Hilo1 extends Thread{
     public void setVive(boolean vive) {
         this.vive = vive;
     }
+
     @Override
-    public void run(){
-        while(vive){
-            if(avanzar){
-                barra.setValue(barra.getValue()+1);
-                if(barra.getValue()==100000000){
-                    vive=false;
-                }                
-            } //FIN IF
-            
+    public void run() {
+        while (vive) {
+            if (avanzar) {
+                int d = 1;
+                prg_c.setValue(prg_c.getMaximum()
+                        - d / (consumo)
+                );
+            }//FIN IF
             try {
-                Thread.sleep(0);
+                Thread.sleep(300);
             } catch (InterruptedException ex) {
             }
         }
+
     }
-    
 }

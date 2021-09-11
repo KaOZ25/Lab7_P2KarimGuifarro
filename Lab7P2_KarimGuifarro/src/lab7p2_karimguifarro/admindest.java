@@ -32,7 +32,7 @@ public class admindest {
 
     @Override
     public String toString() {
-        return "admindest{" + "listadest=" + listadest + ", arch=" + arch + '}';
+        return "admindest{" + "listadest=" + listadest + '}';
     }
    public void cargarArchivo() {
         try {
